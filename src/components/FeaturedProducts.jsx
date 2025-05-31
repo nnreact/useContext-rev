@@ -1,10 +1,13 @@
-import React from 'react'
-import { isDarkModeContext } from '../App';
-import { useContext } from 'react';
+// import React from 'react'
+// import { isDarkModeContext } from '../App';
+// import { useContext } from 'react';
+import { useTheme } from '../state/useTheme';
+
 
 function FeaturedProducts() {
 
-  const {isDarkMode} = useContext(isDarkModeContext);
+  // const {isDarkMode} = useContext(isDarkModeContext);
+  const {isDarkMode} = useTheme();
 
   return (
     <div className={`featured-products ${isDarkMode ? "dark-featured-bg" : "light-featured-bg"}`}>
